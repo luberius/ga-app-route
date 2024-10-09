@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const GaButton = () => {
   const handleClick = () => {
-    sendGAEvent({ event: "buttonClicked", value: "xyz" });
+    sendGAEvent({ event: "button_click", value: "xyz" });
   };
 
   return (
