@@ -6,6 +6,14 @@ import Image from "next/image";
 const GaButton = () => {
   const handleClick = () => {
     sendGAEvent({ event: "button_click", value: "xyz" });
+    if (typeof window.gtag !== "undefined") {
+      window.gtag("event", "button_click", {
+        button_name: "button 2",
+        page_location: window.location.href,
+      });
+    } else {
+      console.error("Google Analytics not loaded");
+    }
   };
 
   return (
