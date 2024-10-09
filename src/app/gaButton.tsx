@@ -1,11 +1,11 @@
 "use client";
 
-import { sendGTMEvent } from "@next/third-parties/google";
+import { sendGAEvent } from "@next/third-parties/google";
 import Image from "next/image";
 
 const GaButton = () => {
   const handleClick = () => {
-    sendGTMEvent({ event: "buttonClicked", value: "xyz" });
+    sendGAEvent({ event: "buttonClicked", value: "xyz" });
   };
 
   return (
