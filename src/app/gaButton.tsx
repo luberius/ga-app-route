@@ -3,13 +3,18 @@
 import { sendGAEvent } from "@next/third-parties/google";
 import Image from "next/image";
 
-const GaButton = () => {
+interface IProps {
+  eventName: string;
+  params: any;
+  label?: string;
+}
+
+const GaButton = ({ eventName, params, label }: IProps) => {
   const handleClick = () => {
     sendGAEvent({ event: "button_click", value: "xyz" });
     if (typeof window.gtag !== "undefined") {
-      window.gtag("event", "button_click", {
-        button_name: "button 2",
-        page_location: window.location.href,
+      window.gtag("event", eventName, {
+        ...params,
       });
     } else {
       console.error("Google Analytics not loaded");
@@ -29,7 +34,7 @@ const GaButton = () => {
         width={20}
         height={20}
       />
-      Test GA
+      {label || "button"}
     </button>
   );
 };
