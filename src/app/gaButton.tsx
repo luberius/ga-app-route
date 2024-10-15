@@ -5,7 +5,7 @@ import Image from "next/image";
 
 interface IProps {
   eventName: string;
-  params: any;
+  params: object;
   label?: string;
 }
 
