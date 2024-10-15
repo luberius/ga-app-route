@@ -28,14 +28,17 @@ export default function Home() {
           <GaButton
             eventName="button_click"
             params={{ content: "button " + new Date().toDateString() }}
+            label="Button Click"
           />
           <GaButton
             eventName="playbook_click"
             params={{ content_id: "playbook 1" }}
+            label="Playbook 1"
           />
           <GaButton
             eventName="playbook_click"
             params={{ content_id: "playbook 2" }}
+            label="Playbook 2"
           />
           <a
             className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
