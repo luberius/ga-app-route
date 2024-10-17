@@ -32,12 +32,24 @@ export default function Home() {
           />
           <GaButton
             eventName="playbook_click"
-            params={{ content_id: "playbook 1" }}
+            params={{
+              content_id: JSON.stringify({
+                playbook: "playbook 1",
+                id: 1,
+                user: 1,
+              }),
+            }}
             label="Playbook 1"
           />
           <GaButton
             eventName="playbook_click"
-            params={{ content_id: "playbook 2" }}
+            params={{
+              content_id: JSON.stringify({
+                playbook: "playbook 2",
+                id: 2,
+                user: 1,
+              }),
+            }}
             label="Playbook 2"
           />
           <a
